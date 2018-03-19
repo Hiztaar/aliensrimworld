@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- torso for animals -->
+  <BodyPartDef>
+    <defName>XenomorphTorso</defName>
+    <label>body</label>
+    <hitPoints>40</hitPoints>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>true</skinCovered>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>XenomorphBrain</defName>
+    <label>brain</label>
+    <hitPoints>20</hitPoints>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <tags>
+      <li>ConsciousnessSource</li>
+	  <li>SightSource</li>
+	  <li>HearingSource</li>
+    </tags>
+    <dontSuggestAmputation>true</dontSuggestAmputation>
+  </BodyPartDef>
+  
+  <BodyPartDef>
+    <defName>BackTubes</defName>
+    <label>brain</label>
+    <hitPoints>20</hitPoints>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <tags>
+	  <li>BreathingSource</li>
+    </tags>
+    <dontSuggestAmputation>true</dontSuggestAmputation>
+  </BodyPartDef>
+  
+  <BodyPartDef>
+    <defName>InnerJaw</defName>
+    <label>jaw</label>
+    <hitPoints>10</hitPoints>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <tags>
+      <li>ManipulationLimbCore</li>
+    </tags>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>XenomorphNeck</defName>
+    <label>neck</label>
+    <hitPoints>30</hitPoints>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <bleedingRateMultiplier>1</bleedingRateMultiplier>
+    <skinCovered>true</skinCovered>
+    <tags>
+      <li>EatingPathway</li>
+      <li>TalkingPathway</li>
+    </tags>
+    <dontSuggestAmputation>true</dontSuggestAmputation>
+  </BodyPartDef>
+  
+  <BodyPartDef>
+    <defName>XenomorphTail</defName>
+    <label>tail</label>
+    <hitPoints>20</hitPoints>
+	<frostbiteVulnerability>0.01</frostbiteVulnerability>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>true</skinCovered>
+  </BodyPartDef>
+
+
+</Defs>

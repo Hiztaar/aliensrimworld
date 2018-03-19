@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+ 
+	<PawnKindDef Name="USCM_BaseXenomorphPawn" Abstract="True">
+		<defaultFactionType>USCM_Xenomorph_Faction</defaultFactionType>
+	</PawnKindDef>
+ 
+ 	<PawnKindDef>
+		<defName>USCM_Xenomorph</defName>
+		<label>Xenomorph</label>
+		<race>USCM_Xenomorph</race>
+		<combatPower>90</combatPower>
+		<defaultFactionType>USCM_Xenomorph_Faction</defaultFactionType>
+		<canArriveManhunter>false</canArriveManhunter>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Runner</texPath>
+					<drawSize>1.6</drawSize>
+					<color>(30,30,30)</color>
+					<shadowData>
+						<volume>(0.4, 0.3, 0.3)</volume>
+						<offset>(0,0,-0.2)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Runner_dessicated</texPath>
+					<drawSize>1.6</drawSize>
+					<color>(30,30,30)</color>
+					<shadowData>
+						<volume>(0.4, 0.3, 0.3)</volume>
+						<offset>(0,0,-0.2)</offset>
+					</shadowData>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+ 
+	<!-- REMOVED UNTIL CODE READY -->
+	<!--
+	<PawnKindDef ParentName="Xenomorph">
+		<defName>USCM_Chestbuster_Xenomorph</defName>
+		<label>Chestbuster Xenomorph</label>
+		<race>USCM_Xenomorph</race>
+		<combatPower>5</combatPower>
+		<defaultFactionType>USCM_Xenomorph_Faction</defaultFactionType>
+			<canArriveManhunter>false</canArriveManhunter>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+				<texPath>Chestbuster</texPath>
+					<drawSize>1</drawSize>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Chestbuster_dessicated</texPath>
+					<drawSize>1</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+	-->
+	
+	<PawnKindDef ParentName="USCM_BaseXenomorphPawn">
+		<defName>USCM_Runner_Xenomorph</defName>
+		<label>Runner Xenomorph</label>
+		<race>USCM_Runner_Xenomorph</race>
+		<combatPower>90</combatPower>
+		<defaultFactionType>USCM_Xenomorph_Faction</defaultFactionType>
+		<canArriveManhunter>True</canArriveManhunter>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Runner</texPath>
+					<drawSize>1.8</drawSize>
+					<color>(30,30,30)</color>
+					<shadowData>
+						<volume>(0.4, 0.4, 0.3)</volume>
+						<offset>(0,0,-0.2)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Runner_dessicated</texPath>
+					<drawSize>1.8</drawSize>
+					<color>(30,30,30)</color>
+					<shadowData>
+						<volume>(0.4, 0.4, 0.3)</volume>
+						<offset>(0,0,-0.2)</offset>
+					</shadowData>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+	
+	<PawnKindDef ParentName="USCM_BaseXenomorphPawn">
+		<defName>USCM_Drone_Xenomorph</defName>
+		<label>Drone Xenomorph</label>
+		<race>USCM_Drone_Xenomorph</race>
+		<combatPower>100</combatPower>
+		<defaultFactionType>USCM_Xenomorph_Faction</defaultFactionType>
+		<canArriveManhunter>True</canArriveManhunter>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Drone</texPath>
+					<drawSize>2</drawSize>
+					<color>(30,30,30)</color>
+					<shadowData>
+						<volume>(0.4, 0.4, 0.3)</volume>
+						<offset>(0,0,-0.2)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Drone_dessicated</texPath>
+					<drawSize>2</drawSize>
+					<color>(30,30,30)</color>
+					<shadowData>
+						<volume>(0.4, 0.4, 0.3)</volume>
+						<offset>(0,0,-0.2)</offset>
+					</shadowData>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+
+ 	<PawnKindDef ParentName="USCM_BaseXenomorphPawn">
+		<defName>USCM_Praetorian_Xenomorph</defName>
+		<label>Praetorian Xenomorph</label>
+		<race>USCM_Praetorian_Xenomorph</race>
+		<combatPower>200</combatPower>
+		<defaultFactionType>USCM_Xenomorph_Faction</defaultFactionType>
+		<canArriveManhunter>false</canArriveManhunter>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Praetorian</texPath>
+					<drawSize>4.5</drawSize>
+					<color>(30,30,30)</color>
+					<shadowData>
+						<volume>(0.8, 0.8, 0.5)</volume>
+						<offset>(0,0,-0.4)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Praetorian_dessicated</texPath>
+					<drawSize>4.5</drawSize>
+					<color>(30,30,30)</color>
+					<shadowData>
+						<volume>(0.8, 0.8, 0.5)</volume>
+						<offset>(0,0,-0.4)</offset>
+					</shadowData>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef> 
+    
+  	<PawnKindDef ParentName="USCM_BaseXenomorphPawn">
+		<defName>USCM_Queen_Xenomorph</defName>
+		<label>Queen Xenomorph</label>
+		<race>USCM_Queen_Xenomorph</race>
+		<combatPower>300</combatPower>
+		<defaultFactionType>USCM_Xenomorph_Faction</defaultFactionType>
+		<canArriveManhunter>false</canArriveManhunter>
+		<factionLeader>true</factionLeader>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Queen</texPath>
+					<drawSize>5.5</drawSize>
+					<color>(30,30,30)</color>
+					<shadowData>
+						<volume>(1, 0.8, 0.5)</volume>
+						<offset>(0,0,-0.5)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Queen_dessicated</texPath>
+					<drawSize>5.5</drawSize>
+					<color>(30,30,30)</color>
+					<shadowData>
+						<volume>(1, 0.8, 0.5)</volume>
+						<offset>(0,0,-0.5)</offset>
+					</shadowData>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>  
+  
+  
+</Defs>

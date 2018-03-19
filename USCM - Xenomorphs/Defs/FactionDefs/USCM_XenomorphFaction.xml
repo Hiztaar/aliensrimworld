@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+	<FactionDef>
+		<defName>USCM_Xenomorph_Faction</defName>
+		<label>Xenomorphs</label>
+		<description>They are many and they are unstoppable.</description>
+		<pawnsPlural>Xenomorphs</pawnsPlural>
+		<requiredCountAtGameStart>1</requiredCountAtGameStart>
+		<fixedName>unknown origin</fixedName>	
+		<humanlikeFaction>false</humanlikeFaction>
+		<hidden>true</hidden>
+		<autoFlee>false</autoFlee>
+		<canUseAvoidGrid>false</canUseAvoidGrid>
+		<techLevel>Animal</techLevel>
+		<earliestRaidDays>10</earliestRaidDays>
+		<canStageAttacks>true</canStageAttacks>
+		<mustStartOneEnemy>true</mustStartOneEnemy>
+		<maxPawnOptionCostFactor>1.0</maxPawnOptionCostFactor>
+		<leaderTitle>Queen</leaderTitle>
+		<startingGoodwill>
+			<min>-100</min>
+			<max>-100</max>
+		</startingGoodwill>
+		<naturalColonyGoodwill>
+			<min>-100</min>
+			<max>-100</max>
+		</naturalColonyGoodwill>
+		<raidCommonalityFromPointsCurve>
+			<points>
+				<li>(1000, 1)</li>
+				<li>(3500, 100)</li>
+			</points>
+		</raidCommonalityFromPointsCurve>
+		<pawnGroupMakers>
+			<li>
+				<kindDef>Normal</kindDef>
+				<options>
+					<USCM_Drone_Xenomorph>100</USCM_Drone_Xenomorph>
+					<USCM_Runner_Xenomorph>100</USCM_Runner_Xenomorph>
+					<USCM_Praetorian_Xenomorph>20</USCM_Praetorian_Xenomorph>
+					<USCM_Queen_Xenomorph>10</USCM_Queen_Xenomorph>  
+				</options>
+				<disallowedStrategies>
+					<li>Siege</li>
+					<li>ImmediateAttackSappers</li>
+				</disallowedStrategies>
+			</li>
+		</pawnGroupMakers> 
+		<allowedArrivalTemperatureRange>
+			<min>-40</min>
+			<max>80</max>
+		</allowedArrivalTemperatureRange>
+		<homeIconPath>World/WorldObjects/DefaultFactionBase</homeIconPath>
+	</FactionDef>
+
+
+</Defs>

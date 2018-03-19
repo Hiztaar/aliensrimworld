@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>USCM - Xenomorphs Faction</name>
+	<author>Hiztaar</author>
+	<url>https://ludeon.com/forums/index.php?topic=15117.0</url>
+	<targetVersion>0.18.1722</targetVersion>
+	<description>This mod introduces the Xenomorphs Faction. 
+
+	Special thanks to Walking Problem for the code and base XML from his mod !
+	
+Vanilla friendly.</description>
+</ModMetaData>

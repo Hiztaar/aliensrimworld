@@ -1,0 +1,325 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="BasePawn" Name="USCM_BaseXenomorphRace" Abstract="True">  
+		<statBases>	
+			<PsychicSensitivity>100</PsychicSensitivity>
+			<ToxicSensitivity>0</ToxicSensitivity>
+			<Flammability>1</Flammability>
+			<ComfyTemperatureMin>-40</ComfyTemperatureMin>
+			<ComfyTemperatureMax>80</ComfyTemperatureMax>
+			<MeatAmount>0</MeatAmount>
+			<LeatherAmount>0</LeatherAmount>	  
+		</statBases>
+		<race>
+			<thinkTreeMain>USCM_Xeno</thinkTreeMain>
+			<body>Xenomorph</body>
+			<bloodDef>FilthBloodInsect</bloodDef>	
+			<foodType>None</foodType>
+			<intelligence>ToolUser</intelligence>
+			<useMeatFrom>GrizzlyBear</useMeatFrom>	    
+			<needsRest>false</needsRest>
+			<hasGenders>false</hasGenders>
+			<!-- <predator>true</predator> -->			
+			<lifeStageAges>
+				<li>
+					<def>AnimalAdult</def>
+					<minAge>0</minAge>
+					<soundWounded>USCM_Xeno_Pain</soundWounded>
+					<soundDeath>USCM_Xeno_Death</soundDeath>
+					<soundCall>USCM_Xeno_Call</soundCall>
+					<soundAngry>USCM_Xeno_Angry</soundAngry>
+				</li>
+			</lifeStageAges>
+			<lifeExpectancy>90</lifeExpectancy>
+			<soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+			<soundCallIntervalRange>
+				<min>3000</min>
+				<max>10000</max>
+			</soundCallIntervalRange>
+		</race>
+	</ThingDef>
+
+
+
+
+
+
+	<!-- Script Dedicated Race -->  
+	<ThingDef ParentName="USCM_BaseXenomorphRace">
+		<defName>USCM_Xenomorph</defName>
+		<label>Xenomorph</label>
+		<description>Xenomorphs are the ultimate killer. Ne feelings, nor remorses, no mercy.</description>
+		<statBases>
+			<MoveSpeed>6</MoveSpeed>
+		</statBases>
+		<verbs>
+		  <li>
+			<verbClass>Verb_MeleeAttack</verbClass>
+			<defaultCooldownTime>5.0</defaultCooldownTime>
+			<meleeDamageBaseAmount>35</meleeDamageBaseAmount>
+			<meleeDamageDef>Stab</meleeDamageDef>
+			<linkedBodyPartsGroup>Mouth</linkedBodyPartsGroup>
+			<surpriseAttack>
+			  <extraMeleeDamages>
+				<li>
+				  <def>Stun</def>
+				  <amount>50</amount>
+				</li>
+			  </extraMeleeDamages>
+			</surpriseAttack>
+		  </li>
+		  <li>
+			<verbClass>Verb_MeleeAttack</verbClass>
+			<defaultCooldownTime>2.0</defaultCooldownTime>
+			<meleeDamageBaseAmount>30</meleeDamageBaseAmount>
+			<meleeDamageDef>Cut</meleeDamageDef>
+			<linkedBodyPartsGroup>XenomorphTail</linkedBodyPartsGroup>
+		  </li>
+		  <li>
+			<verbClass>Verb_MeleeAttack</verbClass>
+			<defaultCooldownTime>1.0</defaultCooldownTime>
+			<meleeDamageBaseAmount>10</meleeDamageBaseAmount>
+			<meleeDamageDef>Cut</meleeDamageDef>
+			<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+		  </li>
+		  <li>
+			<verbClass>Verb_MeleeAttack</verbClass>
+			<defaultCooldownTime>1.0</defaultCooldownTime>
+			<meleeDamageBaseAmount>10</meleeDamageBaseAmount>
+			<meleeDamageDef>Cut</meleeDamageDef>
+			<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+		  </li>
+		</verbs>
+		<race>	
+			<thinkTreeMain>USCM_Xeno</thinkTreeMain>
+			<thinkTreeConstant>AnimalConstant</thinkTreeConstant>
+			<baseBodySize>2.0</baseBodySize>
+			<baseHealthScale>1.2</baseHealthScale>
+		</race>
+	</ThingDef>
+	<!-- End of Dedicated -->
+	
+	
+	<!-- RUNNER -->
+  	<ThingDef ParentName="USCM_BaseXenomorphRace">
+		<defName>USCM_Runner_Xenomorph</defName>
+		<label>Xenomorph</label>
+		<description>Runners are Xenormorph born from a common animal host. They run fast, beware...</description>
+		<statBases>
+			<MoveSpeed>6.5</MoveSpeed>
+			<ArmorRating_Blunt>0.02</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.02</ArmorRating_Sharp>
+		</statBases>
+		<verbs>
+		  <li>
+			<verbClass>Verb_MeleeAttack</verbClass>
+			<defaultCooldownTime>3.5</defaultCooldownTime>
+			<meleeDamageBaseAmount>45</meleeDamageBaseAmount>
+			<meleeDamageDef>Stab</meleeDamageDef>
+			<linkedBodyPartsGroup>Mouth</linkedBodyPartsGroup>
+			<surpriseAttack>
+			  <extraMeleeDamages>
+				<li>
+				  <def>Stun</def>
+				  <amount>50</amount>
+				</li>
+			  </extraMeleeDamages>
+			</surpriseAttack>
+		  </li>
+		  <li>
+			<verbClass>Verb_MeleeAttack</verbClass>
+			<defaultCooldownTime>2.0</defaultCooldownTime>
+			<meleeDamageBaseAmount>35</meleeDamageBaseAmount>
+			<meleeDamageDef>Cut</meleeDamageDef>
+			<linkedBodyPartsGroup>XenomorphTail</linkedBodyPartsGroup>
+		  </li>
+		  <li>
+			<verbClass>Verb_MeleeAttack</verbClass>
+			<defaultCooldownTime>1.0</defaultCooldownTime>
+			<meleeDamageBaseAmount>10</meleeDamageBaseAmount>
+			<meleeDamageDef>Cut</meleeDamageDef>
+			<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+		  </li>
+		  <li>
+			<verbClass>Verb_MeleeAttack</verbClass>
+			<defaultCooldownTime>1.0</defaultCooldownTime>
+			<meleeDamageBaseAmount>10</meleeDamageBaseAmount>
+			<meleeDamageDef>Cut</meleeDamageDef>
+			<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+		  </li>
+		</verbs>
+		<race>	
+			<baseBodySize>2.0</baseBodySize>
+			<baseHealthScale>1.2</baseHealthScale>
+		</race>
+	</ThingDef>	
+	
+	
+	
+	<!-- DRONE -->
+  	<ThingDef ParentName="USCM_BaseXenomorphRace">
+		<defName>USCM_Drone_Xenomorph</defName>
+		<label>Xenomorph</label>
+		<description>Drones are Xenormorph born from a human host. They are smart and deadly efficient at killing.</description>
+		<statBases>
+			<MoveSpeed>5</MoveSpeed>
+			<ArmorRating_Blunt>0.02</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.02</ArmorRating_Sharp>
+		</statBases>
+		<verbs>
+		  <li>
+			<verbClass>Verb_MeleeAttack</verbClass>
+			<defaultCooldownTime>3.5</defaultCooldownTime>
+			<meleeDamageBaseAmount>45</meleeDamageBaseAmount>
+			<meleeDamageDef>Stab</meleeDamageDef>
+			<linkedBodyPartsGroup>Mouth</linkedBodyPartsGroup>
+			<surpriseAttack>
+			 <extraMeleeDamages>
+				<li>
+				  <def>Stun</def>
+				  <amount>50</amount>
+				</li>
+			  </extraMeleeDamages>
+			</surpriseAttack>
+		  </li>
+		  <li>
+			<verbClass>Verb_MeleeAttack</verbClass>
+			<defaultCooldownTime>2.0</defaultCooldownTime>
+			<meleeDamageBaseAmount>40</meleeDamageBaseAmount>
+			<meleeDamageDef>Cut</meleeDamageDef>
+			<linkedBodyPartsGroup>XenomorphTail</linkedBodyPartsGroup>
+		  </li>
+		  <li>
+			<verbClass>Verb_MeleeAttack</verbClass>
+			<defaultCooldownTime>1.0</defaultCooldownTime>
+			<meleeDamageBaseAmount>10</meleeDamageBaseAmount>
+			<meleeDamageDef>Cut</meleeDamageDef>
+			<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+		  </li>
+		  <li>
+			<verbClass>Verb_MeleeAttack</verbClass>
+			<defaultCooldownTime>1.0</defaultCooldownTime>
+			<meleeDamageBaseAmount>10</meleeDamageBaseAmount>
+			<meleeDamageDef>Cut</meleeDamageDef>
+			<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+		  </li>
+		</verbs>
+		<race>	
+			<baseBodySize>2.0</baseBodySize>
+			<baseHealthScale>1.2</baseHealthScale>
+		</race>
+	</ThingDef>		
+	
+	
+	
+	<!-- PRAETORIAN -->
+  	<ThingDef ParentName="USCM_BaseXenomorphRace">
+		<defName>USCM_Praetorian_Xenomorph</defName>
+		<label>Xenomorph</label>
+		<description>Xenomorphs are the ultimate killer. Ne feelings, nor remorses, no mercy.</description>
+		<statBases>
+			<MoveSpeed>5</MoveSpeed>
+			<ArmorRating_Blunt>0.4</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.4</ArmorRating_Sharp>
+		</statBases>
+		<verbs>
+		  <li>
+			<verbClass>Verb_MeleeAttack</verbClass>
+			<defaultCooldownTime>3.0</defaultCooldownTime>
+			<meleeDamageBaseAmount>65</meleeDamageBaseAmount>
+			<meleeDamageDef>Stab</meleeDamageDef>
+			<linkedBodyPartsGroup>Mouth</linkedBodyPartsGroup>
+			<surpriseAttack>
+			  <extraMeleeDamages>
+				<li>
+				  <def>Stun</def>
+				  <amount>50</amount>
+				</li>
+			  </extraMeleeDamages>
+			</surpriseAttack>
+		  </li>
+		  <li>
+			<verbClass>Verb_MeleeAttack</verbClass>
+			<defaultCooldownTime>2.0</defaultCooldownTime>
+			<meleeDamageBaseAmount>50</meleeDamageBaseAmount>
+			<meleeDamageDef>Cut</meleeDamageDef>
+			<linkedBodyPartsGroup>XenomorphTail</linkedBodyPartsGroup>
+		  </li>
+		  <li>
+			<verbClass>Verb_MeleeAttack</verbClass>
+			<defaultCooldownTime>1.0</defaultCooldownTime>
+			<meleeDamageBaseAmount>25</meleeDamageBaseAmount>
+			<meleeDamageDef>Cut</meleeDamageDef>
+			<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+		  </li>
+		  <li>
+			<verbClass>Verb_MeleeAttack</verbClass>
+			<defaultCooldownTime>1.0</defaultCooldownTime>
+			<meleeDamageBaseAmount>25</meleeDamageBaseAmount>
+			<meleeDamageDef>Cut</meleeDamageDef>
+			<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+		  </li>
+		</verbs>
+		<race>	
+			<baseBodySize>4.5</baseBodySize>
+			<baseHealthScale>7.0</baseHealthScale>
+		</race>
+	</ThingDef>
+	
+  	<ThingDef ParentName="USCM_BaseXenomorphRace">
+		<defName>USCM_Queen_Xenomorph</defName>
+		<label>Xenomorph</label>
+		<description>Xenomorphs are the ultimate killer. Ne feelings, nor remorses, no mercy.</description>
+		<statBases>
+			<MoveSpeed>5.5</MoveSpeed>
+			<ArmorRating_Blunt>0.3</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.3</ArmorRating_Sharp>
+		</statBases>
+		<verbs>
+		  <li>
+			<verbClass>Verb_MeleeAttack</verbClass>
+			<defaultCooldownTime>1.0</defaultCooldownTime>
+			<meleeDamageBaseAmount>85</meleeDamageBaseAmount>
+			<meleeDamageDef>Stab</meleeDamageDef>
+			<linkedBodyPartsGroup>Mouth</linkedBodyPartsGroup>
+			<surpriseAttack>
+			  <extraMeleeDamages>
+				<li>
+				  <def>Stun</def>
+				  <amount>50</amount>
+				</li>
+			  </extraMeleeDamages>
+			</surpriseAttack>
+		  </li>
+		  <li>
+			<verbClass>Verb_MeleeAttack</verbClass>
+			<defaultCooldownTime>2.0</defaultCooldownTime>
+			<meleeDamageBaseAmount>70</meleeDamageBaseAmount>
+			<meleeDamageDef>Cut</meleeDamageDef>
+			<linkedBodyPartsGroup>XenomorphTail</linkedBodyPartsGroup>
+		  </li>
+		  <li>
+			<verbClass>Verb_MeleeAttack</verbClass>
+			<defaultCooldownTime>1.0</defaultCooldownTime>
+			<meleeDamageBaseAmount>30</meleeDamageBaseAmount>
+			<meleeDamageDef>Cut</meleeDamageDef>
+			<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+		  </li>
+		  <li>
+			<verbClass>Verb_MeleeAttack</verbClass>
+			<defaultCooldownTime>1.0</defaultCooldownTime>
+			<meleeDamageBaseAmount>30</meleeDamageBaseAmount>
+			<meleeDamageDef>Cut</meleeDamageDef>
+			<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+		  </li>
+		</verbs>
+		<race>	
+			<baseBodySize>5.5</baseBodySize>
+			<baseHealthScale>10.0</baseHealthScale>
+		</race>
+	</ThingDef>	
+	
+</Defs>
